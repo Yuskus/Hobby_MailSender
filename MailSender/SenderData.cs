@@ -16,7 +16,7 @@ public class SenderData
 
     public static SenderData FromJson(string path)
     {
-        string json = File.ReadAllText("uniq_key.json");
+        string json = File.ReadAllText(path);
 
         return JsonSerializer.Deserialize<SenderData>(json) ?? throw new Exception("Ошибка чтения файла конфигурации.");
     }
